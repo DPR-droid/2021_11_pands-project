@@ -20,4 +20,10 @@ The README file contains the documented process for the project
     Furthermore, it should list all references used in completing the project
 
 ## About Iris dataset
+    Find dataset
+
+## References/Citations
+
+[1] http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
+[2] https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv
 
