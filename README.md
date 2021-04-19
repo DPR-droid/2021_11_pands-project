@@ -30,6 +30,24 @@ The dataset was first used by Ronald Fisher in 1936 in his paper “The use of m
 
 ![ The observed means and their differences are shown in Table 11. The sums of squares and products of deviations  from the specific means are shown in Table 111.]( https://github.com/DPR-droid/pands-project/blob/main/README%20image%20files/Table%202.PNG)
 
+## Why Python for this project
+Python is a 4th generation languages, also known as very high level languages.  Python's large standard library, commonly cited as one of its greatest strengths, provides tools suited to many tasks.
+
+After downloading the iris data set and using just one module and two lines of code the data can be imported, read, and produce a summary of the data. 
+
+    import pandas as pd
+    data = pd.read_csv("iris.data",header=None, names=["sepal.length","sepal.width","petal.length","petal.width","variety"])
+    print(data)
+
+On Table 11 Iris data set table excerpts by simply using the groupby function it can be replicated the means of the setosa and versicolor irises
+
+    gk = dataset.groupby('species')
+    print(gk.get_group('Iris-setosa').mean())
+    print(gk.get_group('Iris-versicolor').mean())
+
+
+## Acknowledgement
+Lecturer Andrew Beatty Programming and Scripting GMIT
 
 
 ## References/Citations
@@ -45,7 +63,13 @@ http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
 
 https://stackoverflow.com/questions/14494747/how-to-add-images-to-readme-md-on-github
 
-### Images/
+https://stackoverflow.com/questions/34091877/how-to-add-header-row-to-a-pandas-dataframe
+
+https://numpy.org/
+
+https://www.geeksforgeeks.org/python-pandas-dataframe-groupby/
+
+### Images
  
 https://en.wikipedia.org/wiki/Ronald_Fisher
 

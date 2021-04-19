@@ -20,9 +20,26 @@ import pandas as pd
 ### Fist line is not a header
 ### Add headers
 ########################################################################
-data = pd.read_csv("iris.data",header=None, names=["sepal.length","sepal.width","petal.length","petal.width","variety"])
+dataset = pd.read_csv("iris.data",header=None, names=["sepal.length","sepal.width","petal.length","petal.width","species"])
 
 ########################################################################
-# Print data
+# Get the means of the observable means for two species
 ########################################################################
-print(data)
+
+# Group by Species
+gk = dataset.groupby('species')
+
+
+print("Table II observable means for two species")
+
+print("Setosa")
+# Display the means of the Iris-setosa
+print(gk.get_group('Iris-setosa').mean())
+
+print("versicolor")
+# Display the means of the Iris-versicolor
+print(gk.get_group('Iris-versicolor').mean())
+
+
+
+
