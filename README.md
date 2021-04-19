@@ -32,7 +32,14 @@ The dataset was first used by Ronald Fisher in 1936 in his paper “The use of m
 
 ## Tools/ Resources
 
-    http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
+http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
 
+### Images/
+ 
+https://en.wikipedia.org/wiki/Ronald_Fisher
+
+https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1469-1809.1936.tb02137.x
+    
+https://www.kaggle.com/vinayshaw/iris-species-100-accuracy-using-naive-bayes
 
 
