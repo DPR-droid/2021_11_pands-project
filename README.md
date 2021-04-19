@@ -8,7 +8,7 @@ The repository is created to show my research of the well-known Fisher’s Iris 
 ## The Fisher’s Iris data set background
 ### Ronald Fisher
 
-
+![Ronald Fisher]( https://github.com/DPR-droid/pands-project/blob/main/README%20image%20files/Ronald%20Fisher.JPG)
 
 Sir Ronald Aylmer Fisher, byname R.A. Fisher, (born February 17, 1890, London, England—died July 29, 1962, Adelaide, Australia), British statistician and geneticist who pioneered the application of statistical procedures to the design of scientific experiments. [1]
 
