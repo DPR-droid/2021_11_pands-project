@@ -7,6 +7,9 @@ The repository is created to show my research of the well-known Fisher’s Iris 
 
 ## The Fisher’s Iris data set background
 ### Ronald Fisher
+
+
+
 Sir Ronald Aylmer Fisher, byname R.A. Fisher, (born February 17, 1890, London, England—died July 29, 1962, Adelaide, Australia), British statistician and geneticist who pioneered the application of statistical procedures to the design of scientific experiments. [1]
 
 ### The data set
@@ -16,10 +19,16 @@ Dr E. Anderson measured the two species Iris setosa and iris versicolor growing 
 3.	Petal Length
 4.	Petal width
 
+ ![Illustration of measurement of sepal and petal on the three species of irises](https://github.com/DPR-droid/pands-project/blob/main/README%20image%20files/Iris%20Sepal%20and%20Petal.PNG)
+
 The dataset was first used by Ronald Fisher in 1936 in his paper “The use of multiple measurements in taxonomic problems”. The idea proposed by Fisher is linear discriminant: “WHEN two or more populations have been measured in several characters, xl, ... , x8, special interest attaches to certain linear  functions of the measurements  by which the populations are best discriminated.” [2]  
 
 
+### Iris data set table excerpts
 
+![ Table I shows measurements of the flowers of fifty plants]( https://github.com/DPR-droid/pands-project/blob/main/README%20image%20files/Table%201.PNG)
+
+![ The observed means and their differences are shown in Table 11. The sums of squares and products of deviations  from the specific means are shown in Table 111.]( https://github.com/DPR-droid/pands-project/blob/main/README%20image%20files/Table%202.PNG)
 
 
 
@@ -34,6 +43,8 @@ The dataset was first used by Ronald Fisher in 1936 in his paper “The use of m
 
 http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
 
+https://stackoverflow.com/questions/14494747/how-to-add-images-to-readme-md-on-github
+
 ### Images/
  
 https://en.wikipedia.org/wiki/Ronald_Fisher
@@ -41,5 +52,7 @@ https://en.wikipedia.org/wiki/Ronald_Fisher
 https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1469-1809.1936.tb02137.x
     
 https://www.kaggle.com/vinayshaw/iris-species-100-accuracy-using-naive-bayes
+
+
 
 
