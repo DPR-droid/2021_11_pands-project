@@ -6,7 +6,7 @@
 ########################################################################
 
 ########################################################################
-# Program created 27-03-2021
+# Program updated 19/04/2021
 # Import module, import iris.data and print data with headers
 ########################################################################
 
@@ -17,7 +17,7 @@ import pandas as pd
 
 ########################################################################
 ### Read data file
-### Fist line is not a header
+### First line is not a header
 ### Add headers
 ########################################################################
 dataset = pd.read_csv("iris.data",header=None, names=["sepal.length","sepal.width","petal.length","petal.width","species"])
@@ -29,7 +29,6 @@ dataset = pd.read_csv("iris.data",header=None, names=["sepal.length","sepal.widt
 # Group by Species
 gk = dataset.groupby('species')
 
-
 print("Table II observable means for two species")
 
 print("Setosa")
@@ -39,7 +38,3 @@ print(gk.get_group('Iris-setosa').mean())
 print("versicolor")
 # Display the means of the Iris-versicolor
 print(gk.get_group('Iris-versicolor').mean())
-
-
-
-

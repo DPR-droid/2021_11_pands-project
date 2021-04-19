@@ -39,12 +39,15 @@ After downloading the iris data set and using just one module and two lines of c
     data = pd.read_csv("iris.data",header=None, names=["sepal.length","sepal.width","petal.length","petal.width","variety"])
     print(data)
 
+![Why Python 01]( https://github.com/DPR-droid/pands-project/blob/main/README%20image%20files/Why%20Python%2001.PNG)
+
 On Table 11 Iris data set table excerpts by simply using the groupby function it can be replicated the means of the setosa and versicolor irises
 
     gk = dataset.groupby('species')
     print(gk.get_group('Iris-setosa').mean())
     print(gk.get_group('Iris-versicolor').mean())
 
+![ Why Python 02]( https://github.com/DPR-droid/pands-project/blob/main/README%20image%20files/Why%20Python%2002.PNG)
 
 ## Acknowledgement
 Lecturer Andrew Beatty Programming and Scripting GMIT
