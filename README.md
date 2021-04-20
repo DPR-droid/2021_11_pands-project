@@ -49,6 +49,12 @@ On Table 11 Iris data set table excerpts by simply using the groupby function it
 
 ![ Why Python 02]( https://github.com/DPR-droid/pands-project/blob/main/README%20image%20files/Why%20Python%2002.PNG)
 
+The file was renamed to whypython.py 
+
+## An overview investigation
+
+I wanted to do a descriptive analysis of the entire dataset and by species. This the outputusing the describe() would provide detail of the count (number of observations), mean, standard deviation of the values, minimum, 25%/50%/75% Percentiles and maximum values. This is also a simple check to verify the dataset I was working with had 150 observation with 50 observations per species
+
 ## Acknowledgement
 Lecturer Andrew Beatty Programming and Scripting GMIT
 
