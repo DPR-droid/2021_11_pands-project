@@ -57,9 +57,14 @@ I wanted to do a descriptive analysis of the entire dataset and by species. The 
 
 Definition of taxonomy is the scientific study of naming, defining (circumscribing) and classifying groups of biological organisms based on shared characteristics. In Python, we are going on a journey by analysing the dataset, if we can classify the groups of irises shared characteristics (sepal and petal, lengths and width) in the three different species. This project will first start using histograms, scatterplots, boxplots (and other methods if discovered during further research) to help identify these differences. This method is called Univariate analysis is the simplest form of analysing data. “Uni” means “one”, so in other words your data has only one variable. It doesn't deal with causes or relationships (unlike regression) and its major purpose is to describe; It takes data, summarizes that data and finds patterns in the data [4]. If times allow and we will see if we can use predictive analysis to identify the species of Iris
 
-## Observations from histograms
+### Histograms
+Histogram is a plot that lets you discover, and show, the underlying frequency distribution (shape) of a set of continuous data [5]
+
+#### Observations
     The iris setosa has a noticeable difference from the other species in the petal length and width
 
+### Boxplot
+The boxplot is a type of chart often used in explanatory data analysis. Box plots visually show the distribution of numerical data and skewness through displaying the data quartiles (or percentiles) and averages.[6]
 
 
 
@@ -78,6 +83,10 @@ Lecturer Andrew Beatty Programming and Scripting GMIT
 [3] https://en.wikipedia.org/wiki/Taxonomy_(biology)
 
 [4] https://www.statisticshowto.com/univariate/
+
+[5] https://statistics.laerd.com/statistical-guides/understanding-histograms.php
+
+[6] https://www.simplypsychology.org/boxplots.html
 
 
 ## Tools/ Resources

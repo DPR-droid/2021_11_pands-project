@@ -79,23 +79,26 @@ iris_virginica=dataset.loc[dataset["species"]=="Iris-virginica"]
 #
 ########################################################################
 
-print(iris_setosa)
-print(iris_versicolor)
-print(iris_virginica)
+#print(iris_setosa)
+#print(iris_versicolor)
+#print(iris_virginica)
 
 ########################################################################
 # Try histogram using seaborn module
 #
 ########################################################################
 
-sns.FacetGrid(dataset,hue="species",size=3).map(sns.distplot,"petal.length").add_legend()
-sns.FacetGrid(dataset,hue="species",size=3).map(sns.distplot,"petal.width").add_legend()
-sns.FacetGrid(dataset,hue="species",size=3).map(sns.distplot,"sepal.length").add_legend()
-sns.FacetGrid(dataset,hue="species",size=3).map(sns.distplot,"sepal.width").add_legend()
+#sns.FacetGrid(dataset,hue="species",size=3).map(sns.distplot,"petal.length").add_legend()
+#sns.FacetGrid(dataset,hue="species",size=3).map(sns.distplot,"petal.width").add_legend()
+#sns.FacetGrid(dataset,hue="species",size=3).map(sns.distplot,"sepal.length").add_legend()
+#sns.FacetGrid(dataset,hue="species",size=3).map(sns.distplot,"sepal.width").add_legend()
+# plt.show()
+
+
+########################################################################
+# Create a boxplot
+#
+########################################################################
+
+sns.boxplot(x="species",y="petal.length",data=dataset)
 plt.show()
-
-
-########################################################################
-# Try histogram using seaborn module
-#
-########################################################################
