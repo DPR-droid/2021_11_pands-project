@@ -6,7 +6,7 @@
 ########################################################################
 
 ########################################################################
-# Program updated 21/04/2021
+# Program updated 21/04/2021 ouput plots
 ########################################################################
 
 ########################################################################
@@ -82,3 +82,14 @@ iris_virginica=dataset.loc[dataset["species"]=="Iris-virginica"]
 print(iris_setosa)
 print(iris_versicolor)
 print(iris_virginica)
+
+########################################################################
+# Try histogram using seaborn module
+#
+########################################################################
+
+sns.FacetGrid(dataset,hue="species",size=3).map(sns.distplot,"petal.length").add_legend()
+sns.FacetGrid(dataset,hue="species",size=3).map(sns.distplot,"petal.width").add_legend()
+sns.FacetGrid(dataset,hue="species",size=3).map(sns.distplot,"sepal.length").add_legend()
+sns.FacetGrid(dataset,hue="species",size=3).map(sns.distplot,"sepal.width").add_legend()
+plt.show()
