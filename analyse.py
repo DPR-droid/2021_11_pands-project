@@ -93,3 +93,9 @@ sns.FacetGrid(dataset,hue="species",size=3).map(sns.distplot,"petal.width").add_
 sns.FacetGrid(dataset,hue="species",size=3).map(sns.distplot,"sepal.length").add_legend()
 sns.FacetGrid(dataset,hue="species",size=3).map(sns.distplot,"sepal.width").add_legend()
 plt.show()
+
+
+########################################################################
+# Try histogram using seaborn module
+#
+########################################################################

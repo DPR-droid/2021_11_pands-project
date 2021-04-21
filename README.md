@@ -55,7 +55,14 @@ The file was renamed to whypython.py
 
 I wanted to do a descriptive analysis of the entire dataset and by species. The output would provide detail of the count (number of observations), mean, standard deviation of the values, minimum, 25%/50%/75% Percentiles and maximum values. This is also a simple check to verify the dataset I was working with had 150 observation with 50 observations per species.
 
-Definition of taxonomy is the scientific study of naming, defining (circumscribing) and classifying groups of biological organisms based on shared characteristics. [3] In Python, we are going on a journey by analysing the dataset, if we can classify the groups of irises shared characteristics (sepal and petal, lengths and width) into the three different species. This project will first start using histograms, scatterplots, boxplots (and other methods if discovered during further research) to help identify these differences. If times allow and we will see if we can use predictive analysis to identify the species of Iris
+Definition of taxonomy is the scientific study of naming, defining (circumscribing) and classifying groups of biological organisms based on shared characteristics. In Python, we are going on a journey by analysing the dataset, if we can classify the groups of irises shared characteristics (sepal and petal, lengths and width) in the three different species. This project will first start using histograms, scatterplots, boxplots (and other methods if discovered during further research) to help identify these differences. This method is called Univariate analysis is the simplest form of analysing data. “Uni” means “one”, so in other words your data has only one variable. It doesn't deal with causes or relationships (unlike regression) and its major purpose is to describe; It takes data, summarizes that data and finds patterns in the data [4]. If times allow and we will see if we can use predictive analysis to identify the species of Iris
+
+## Observations from histograms
+    The iris setosa has a noticeable difference from the other species in the petal length and width
+
+
+
+
 
 
 ## Acknowledgement
@@ -70,6 +77,8 @@ Lecturer Andrew Beatty Programming and Scripting GMIT
 
 [3] https://en.wikipedia.org/wiki/Taxonomy_(biology)
 
+[4] https://www.statisticshowto.com/univariate/
+
 
 ## Tools/ Resources
 
@@ -82,6 +91,10 @@ https://stackoverflow.com/questions/34091877/how-to-add-header-row-to-a-pandas-d
 https://numpy.org/
 
 https://www.geeksforgeeks.org/python-pandas-dataframe-groupby/
+
+https://blog.usejournal.com/exploratory-data-analysis-72d596620e31
+
+https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d
 
 ### Images
  
