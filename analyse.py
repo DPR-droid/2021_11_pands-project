@@ -79,3 +79,6 @@ iris_virginica=dataset.loc[dataset["species"]=="Iris-virginica"]
 #
 ########################################################################
 
+print(iris_setosa)
+print(iris_versicolor)
+print(iris_virginica)
