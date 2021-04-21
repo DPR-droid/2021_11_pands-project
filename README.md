@@ -53,7 +53,10 @@ The file was renamed to whypython.py
 
 ## An overview investigation
 
-I wanted to do a descriptive analysis of the entire dataset and by species. This the outputusing the describe() would provide detail of the count (number of observations), mean, standard deviation of the values, minimum, 25%/50%/75% Percentiles and maximum values. This is also a simple check to verify the dataset I was working with had 150 observation with 50 observations per species
+I wanted to do a descriptive analysis of the entire dataset and by species. The output would provide detail of the count (number of observations), mean, standard deviation of the values, minimum, 25%/50%/75% Percentiles and maximum values. This is also a simple check to verify the dataset I was working with had 150 observation with 50 observations per species.
+
+Definition of taxonomy is the scientific study of naming, defining (circumscribing) and classifying groups of biological organisms based on shared characteristics. [3] In Python, we are going on a journey by analysing the dataset, if we can classify the groups of irises shared characteristics (sepal and petal, lengths and width) into the three different species. This project will first start using histograms, scatterplots, boxplots (and other methods if discovered during further research) to help identify these differences. If times allow and we will see if we can use predictive analysis to identify the species of Iris
+
 
 ## Acknowledgement
 Lecturer Andrew Beatty Programming and Scripting GMIT
@@ -64,6 +67,8 @@ Lecturer Andrew Beatty Programming and Scripting GMIT
 [1] https://www.britannica.com/biography/Ronald-Aylmer-Fisher
 
 [2] https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1469-1809.1936.tb02137.x
+
+[3] https://en.wikipedia.org/wiki/Taxonomy_(biology)
 
 
 ## Tools/ Resources
