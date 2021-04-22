@@ -103,5 +103,17 @@ iris_virginica=dataset.loc[dataset["species"]=="Iris-virginica"]
 # sns.boxplot(x="species",y="petal.length",data=dataset)
 # sns.boxplot(x="species",y="sepal.length",data=dataset)
 # sns.boxplot(x="species",y="petal.width",data=dataset)
-sns.boxplot(x="species",y="sepal.width",data=dataset)
+# sns.boxplot(x="species",y="sepal.width",data=dataset)
+# plt.show()
+
+
+########################################################################
+# Create a Pairwise plots/scatterplot matrix
+#
+########################################################################
+
+g = sns.PairGrid(dataset, hue="species")
+g.map_diag(sns.histplot)
+g.map_offdiag(sns.scatterplot)
+g.add_legend()
 plt.show()

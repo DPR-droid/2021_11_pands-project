@@ -69,7 +69,11 @@ The boxplot is a type of chart often used in explanatory data analysis. Box plot
 #### Observations
     The iris setosa again shows a noticeable difference from the other species in the petal length and width. The iris virginica has a couple of outliers on the sepal lenght and width.
 
+### Pairwise plots/scatterplot matrix
+With four lines of code in python gives a four by four matrix with histograms on the diagonal and scatter plots for a combination of each of the variables. 
 
+#### Observations
+    The iris setosa again shows a noticeable difference from the other species in the petal length and width. The last two rows of the petal width and lenght show groupings with only slight cross over in the iris virginica and iris virginica .
 
 ## Acknowledgement
 Lecturer Andrew Beatty Programming and Scripting GMIT
@@ -105,6 +109,10 @@ https://www.geeksforgeeks.org/python-pandas-dataframe-groupby/
 https://blog.usejournal.com/exploratory-data-analysis-72d596620e31
 
 https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d
+
+https://towardsdatascience.com/visualizing-data-with-pair-plots-in-python-f228cf529166
+
+https://seaborn.pydata.org/tutorial/axis_grids.html
 
 ### Images
  
