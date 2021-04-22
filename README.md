@@ -66,7 +66,8 @@ Histogram is a plot that lets you discover, and show, the underlying frequency d
 ### Boxplot
 The boxplot is a type of chart often used in explanatory data analysis. Box plots visually show the distribution of numerical data and skewness through displaying the data quartiles (or percentiles) and averages.[6]
 
-
+#### Observations
+    The iris setosa again shows a noticeable difference from the other species in the petal length and width. The iris virginica has a couple of outliers on the sepal lenght and width.
 
 
 

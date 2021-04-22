@@ -100,5 +100,8 @@ iris_virginica=dataset.loc[dataset["species"]=="Iris-virginica"]
 #
 ########################################################################
 
-sns.boxplot(x="species",y="petal.length",data=dataset)
+# sns.boxplot(x="species",y="petal.length",data=dataset)
+# sns.boxplot(x="species",y="sepal.length",data=dataset)
+# sns.boxplot(x="species",y="petal.width",data=dataset)
+sns.boxplot(x="species",y="sepal.width",data=dataset)
 plt.show()
