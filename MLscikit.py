@@ -44,4 +44,20 @@ print(X_train.shape)
 print(X_test.shape)
 print("*******************************")
 
+########################################################################
+# Create the model and test accuracy of the model
+# 
+########################################################################
+
+
+knn = KNeighborsClassifier(n_neighbors = 1)
+knn.fit(X_train, y_train)
+
+print(knn.score(X_test, y_test))
+print("*******************************")
+
+
+
+
+
 
