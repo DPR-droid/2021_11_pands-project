@@ -75,6 +75,12 @@ With four lines of code in python gives a four by four matrix with histograms on
 #### Observations
     The iris setosa again shows a noticeable difference from the other species in the petal length and width. The last two rows of the petal width and lenght show groupings with only slight cross over in the iris virginica and iris virginica .
 
+### Violin 
+Other researchers have shown to use a violin plot this method is test how easily it is implimented in python. A violin plot is a method of plotting numeric data. It is similar to a box plot, with the addition of a rotated kernel density plot on each side. ... While a box plot only shows summary statistics such as mean/median and interquartile ranges, the violin plot shows the full distribution of the data.
+
+#### Observations
+    This seems to be a mix between histograms and boxplots, futher research is required to understand the output.
+
 ## Acknowledgement
 Lecturer Andrew Beatty Programming and Scripting GMIT
 
@@ -92,6 +98,8 @@ Lecturer Andrew Beatty Programming and Scripting GMIT
 [5] https://statistics.laerd.com/statistical-guides/understanding-histograms.php
 
 [6] https://www.simplypsychology.org/boxplots.html
+
+[7] https://en.wikipedia.org/wiki/Violin_plot
 
 
 ## Tools/ Resources

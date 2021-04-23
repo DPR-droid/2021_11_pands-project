@@ -6,7 +6,7 @@
 ########################################################################
 
 ########################################################################
-# Program updated 22/04/2021 output plots
+# Program updated 23/04/2021 output plots
 ########################################################################
 
 ########################################################################
@@ -112,8 +112,16 @@ iris_virginica=dataset.loc[dataset["species"]=="Iris-virginica"]
 #
 ########################################################################
 
-g = sns.PairGrid(dataset, hue="species")
-g.map_diag(sns.histplot)
-g.map_offdiag(sns.scatterplot)
-g.add_legend()
+# g = sns.PairGrid(dataset, hue="species")
+# g.map_diag(sns.histplot)
+# g.map_offdiag(sns.scatterplot)
+# g.add_legend()
+# plt.show()
+
+########################################################################
+# Create a violin plot
+#
+########################################################################
+
+sns.violinplot(x="species",y="petal.length",data=dataset)
 plt.show()
