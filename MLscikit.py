@@ -58,6 +58,18 @@ print("*******************************")
 
 
 
+########################################################################
+# Test the model with dimensions to get output of iris species
+# 6.9, 2.9, 4, 1.5
+########################################################################
 
+X_new = np.array([[6.9, 2.9, 4, 1.5]])
+print(X_new.shape)
+
+print("*******************************")
+prediction = knn.predict(X_new)
+print(prediction)
+print("*******************************")
+print(iris['target_names'][prediction])
 
 
