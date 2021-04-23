@@ -24,5 +24,24 @@ print("*******************************")
 print(iris['feature_names'])
 print("*******************************")
 print(iris['data'].shape)
+print("*******************************")
+print(iris['data'])
+print("*******************************")
+data1 = pd.DataFrame(data= np.c_[iris['data'], iris['target']],columns= iris['feature_names'] + ['target'])
+data1['target']=pd.to_numeric(data1['target'],downcast='integer')
+
+print(data1)
+
+########################################################################
+# Create training data
+#
+########################################################################
+
+X_train, X_test, y_train, y_test = train_test_split(iris['data'], iris['target'], random_state = 0)
+
+print("*******************************")
+print(X_train.shape)
+print(X_test.shape)
+print("*******************************")
 
 
