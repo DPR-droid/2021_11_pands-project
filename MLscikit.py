@@ -16,5 +16,13 @@ import pandas as pd
 iris=load_iris()
 
 print(iris['DESCR'])
+print("*******************************")
+print(iris.keys())
+print("*******************************")
+print(iris['target_names'])
+print("*******************************")
+print(iris['feature_names'])
+print("*******************************")
+print(iris['data'].shape)
 
 
