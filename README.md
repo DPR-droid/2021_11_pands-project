@@ -81,6 +81,14 @@ Other researchers have shown to use a violin plot this method is test how easily
 #### Observations
     This seems to be a mix between histograms and boxplots, futher research is required to understand the output.
 
+
+## Machine Learning
+scikit-learn comes with a few small standard datasets that do not require to download any file from some external website.[8] install module using 
+    
+    pip install -U scikit-learn
+
+
+
 ## Acknowledgement
 Lecturer Andrew Beatty Programming and Scripting GMIT
 
@@ -100,6 +108,8 @@ Lecturer Andrew Beatty Programming and Scripting GMIT
 [6] https://www.simplypsychology.org/boxplots.html
 
 [7] https://en.wikipedia.org/wiki/Violin_plot
+
+[8] https://scikit-learn.org/stable/datasets/toy_dataset.html
 
 
 ## Tools/ Resources
@@ -121,6 +131,16 @@ https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-dat
 https://towardsdatascience.com/visualizing-data-with-pair-plots-in-python-f228cf529166
 
 https://seaborn.pydata.org/tutorial/axis_grids.html
+
+https://scikit-learn.org/stable/tutorial/basic/tutorial.html
+
+https://scikit-learn.org/stable/install.html
+
+https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html#sklearn.datasets.load_iris
+
+https://translate.google.com/translate?sl=auto&tl=en&u=https://paulovasconcellos.com.br/como-criar-seu-primeiro-aplicativo-de-machine-learning-7b6af291ba11
+
+https://www.kaggle.com/marcelotournier/iris-dataset-machine-learning-exercise
 
 ### Images
  
