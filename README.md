@@ -160,6 +160,7 @@ https://translate.google.com/translate?sl=auto&tl=en&u=https://paulovasconcellos
 
 https://www.kaggle.com/marcelotournier/iris-dataset-machine-learning-exercise
 
+https://matplotlib.org/3.1.1/gallery/ticks_and_spines/ticklabels_rotation.html
 
 ### Images
  

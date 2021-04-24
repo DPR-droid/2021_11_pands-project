@@ -108,11 +108,22 @@ print("Output of histograms completed")
 
 ########################################################################
 # Create a boxplot
+# Overlap in label use xticks to rotate label on the x axis
 ########################################################################
 sns.boxplot(x="species",y="petal.length",data=dataset)
+plt.xticks(x="species", rotation='vertical')
 plt.savefig('BoxPL.png')
 
 print("Output of boxplot completed")
+
+########################################################################
+# Create a violin plot
+#
+########################################################################
+sns.violinplot(x="species",y="petal.length",data=dataset)
+plt.savefig('ViolinPL.png')
+
+print("Output of violin plot completed")
 
 ########################################################################
 # Create a Pairwise plots/scatterplot matrix
@@ -125,11 +136,4 @@ plt.savefig('Pairwise-Scatterplots.png')
 
 print("Output of Pairwise plots/scatterplot matrix completed")
 
-########################################################################
-# Create a violin plot
-#
-########################################################################
-sns.violinplot(x="species",y="petal.length",data=dataset)
-plt.savefig('ViolinPL.png')
 
-print("Output of violin plot completed")
