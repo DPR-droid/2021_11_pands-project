@@ -123,6 +123,8 @@ The python program completes the following tasks
 
 ## Conclusion
 
+![MLTesting](https://github.com/DPR-droid/pands-project/blob/main/README%20image%20files/MLTesting.PNG)
+
 
 ## Acknowledgement
 Lecturer Andrew Beatty Programming and Scripting GMIT
