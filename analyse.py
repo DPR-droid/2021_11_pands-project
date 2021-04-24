@@ -85,7 +85,7 @@ f.write("# Output a descriptive analysis of the Iris Virginica\n")
 f.write(str(iris_virginica.describe()))
 f.close()
 
-print("Output summary to a single text file completed")
+print("Output summary data")
 
 ########################################################################
 # Outputs plot to png for Project requirements
@@ -118,7 +118,6 @@ print("Output of boxplot completed")
 
 ########################################################################
 # Create a violin plot
-#
 ########################################################################
 sns.violinplot(x="species",y="petal.length",data=dataset)
 plt.savefig('ViolinPL.png')
@@ -136,4 +135,18 @@ plt.savefig('Pairwise-Scatterplots.png')
 
 print("Output of Pairwise plots/scatterplot matrix completed")
 
+
+########################################################################
+# Test if user has sklearn module is installed
+# Installing a module is the users decision
+########################################################################
+try:
+    import sklearn
+    print("sklearn module detected commencing Machine Learning :D \n")
+except ImportError as e:
+    print("Unfortunately you do not have sklearn modules installed\n")
+    print("Please install using the following command\n")
+    print("pip install -U scikit-learn")
+    print("\n")
+    exit()
 

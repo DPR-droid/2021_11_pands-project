@@ -106,6 +106,7 @@ Giving the output as
 ## Acknowledgement
 Lecturer Andrew Beatty Programming and Scripting GMIT
 
+The family (Thanks for taken care of me)
 
 ## References/Citations
 
@@ -161,6 +162,10 @@ https://translate.google.com/translate?sl=auto&tl=en&u=https://paulovasconcellos
 https://www.kaggle.com/marcelotournier/iris-dataset-machine-learning-exercise
 
 https://matplotlib.org/3.1.1/gallery/ticks_and_spines/ticklabels_rotation.html
+
+https://stackoverflow.com/questions/1051254/check-if-python-package-is-installed
+
+
 
 ### Images
  
