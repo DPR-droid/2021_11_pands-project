@@ -29,7 +29,8 @@ import seaborn as sns
 
 
 ########################################################################
-### Simple file check if user does not download full git repository
+# Simple file check if user has not download full git repository with 
+# the iris.data file
 ########################################################################
 fileexists = path.exists("iris.data")
 
@@ -59,14 +60,9 @@ iris_versicolor=dataset.loc[dataset["species"]=="Iris-versicolor"]
 iris_virginica=dataset.loc[dataset["species"]=="Iris-virginica"]
 
 ########################################################################
-# output a descriptive analysis of the Dataset and Species
+# exit for test purposes
 ########################################################################
-print(dataset.describe())
-print(iris_setosa.describe())
-print(iris_versicolor.describe())
-print(iris_versicolor.describe())
-
-
+exit()
 ########################################################################
 # Histogram of Iris dataset
 # UserWarning: The `size` parameter has been renamed to `height`; 
