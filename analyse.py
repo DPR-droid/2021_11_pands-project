@@ -88,6 +88,9 @@ f.close()
 print("Output summary to a single text file completed")
 
 ########################################################################
+# Outputs plot to png for Project requirements
+########################################################################
+########################################################################
 # Histogram of Iris dataset
 # UserWarning: The `size` parameter has been renamed to `height`; 
 # please update your code.
