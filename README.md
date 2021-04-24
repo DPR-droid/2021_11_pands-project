@@ -4,8 +4,8 @@
 The repository is created to show my research of the well-known Fisher’s Iris data set and to write the documentation for my python code to investigate.  The first objective is to create a README file which contains a summary of the dataset and investigation. 
 
 1. Fisher’s Iris data set background
-2. Use python to demostrate its functionality
-3. Invesgiate the Iris fisher data base using python with observations
+2. Use python to demonstrate its functionality
+3. Investigate the Iris fisher data base using python with observations
 4. Test machine learning on the data set.
 5. Finalise the python program for project.
 
@@ -80,10 +80,10 @@ With four lines of code in python gives a four by four matrix with histograms on
     The iris setosa again shows a noticeable difference from the other species in the petal length and width. The last two rows of the petal width and lenght show groupings with only slight cross over in the iris virginica and iris virginica .
 
 ### Violin 
-Other researchers have shown to use a violin plot this method is test how easily it is implimented in python. A violin plot is a method of plotting numeric data. It is similar to a box plot, with the addition of a rotated kernel density plot on each side. ... While a box plot only shows summary statistics such as mean/median and interquartile ranges, the violin plot shows the full distribution of the data.
+Other researchers have shown to use a violin plot this method is test how easily it is implemented in python. A violin plot is a method of plotting numeric data. It is like a box plot, with the addition of a rotated kernel density plot on each side. ... While a box plot only shows summary statistics such as mean/median and interquartile ranges, the violin plot shows the full distribution of the data.
 
 #### Observations
-    This seems to be a mix between histograms and boxplots, futher research is required to understand the output.
+    This seems to be a mix between histograms and boxplots, further research is required to understand the output.
 
 
 ## Machine Learning
@@ -92,9 +92,9 @@ This again is another reason why python is suggested as a tool for data analysis
     pip install -U scikit-learn
 
 ### Supervised machine learning
-The method choosen for Machine Learning is called k-nearest neighbors (KNN) algorithm. A supervised machine learning algorithm (as opposed to an unsupervised machine learning algorithm) is one that relies on labeled input data to learn a function that produces an appropriate output when given new unlabeled data. [9]
+The method chosen for Machine Learning is called k-nearest neighbours (KNN) algorithm. A supervised machine learning algorithm (as opposed to an unsupervised machine learning algorithm) is one that relies on labelled input data to learn a function that produces an appropriate output when given new unlabelled data. [9]
 
-The dataset was split into training and test data,  and then create the model and test accuracy of the model with an accuracy of 0.9736842105263158. Then to test the model with dimensions to get output of iris species the following was used as input
+The dataset was split into training and test data, and then create the model and test accuracy of the model with an accuracy of 0.9736842105263158. Then to test the model with dimensions to get output of iris species the following was used as input
 
     np.array([[6.9, 2.9, 4, 1.5]])
 
@@ -102,11 +102,32 @@ Giving the output as
     
     ['versicolor']
 
+## Python Program
+The python program completes the following tasks
+
+1. Imports modules
+2. Checks if the user has the iris.data file. Informs user if present or not
+3. Reads the data file and adds headers
+4. Outputs data to csv file and informs the user when completed
+5. Sets the dataset for each species of iris
+6. Outputs data to a single text file and informs the user when completed
+7. Saves histograms, boxplot, violin and Pairwise plots/scatterplot matrix as pngs and informs the user when completed
+8. Test if user has sklearn module installed and ends program if not
+9. Creates the dataframe
+10. Original text is re-written with output from sklearn module
+11. Creates the training data and tests the accuracy of the model
+12. Appends summary text file and informs the user when completed
+13. Allows user to input data and test the model
+14. The predicted iris species is displayed to user
+15. Program closes.
+
+## Conclusion
+
 
 ## Acknowledgement
 Lecturer Andrew Beatty Programming and Scripting GMIT
 
-The family (Thanks for taken care of me)
+Family and friends for their support
 
 ## References/Citations
 

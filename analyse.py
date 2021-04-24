@@ -148,8 +148,8 @@ try:
 except ImportError as e:
     print("Unfortunately you do not have sklearn modules installed\n")
     print("Please install using the following command\n")
-    print("pip install -U scikit-learn")
-    print("\n")
+    print("pip install -U scikit-learn\n")
+    print("This will allow you to rerun the program and try some Machine Learning\n")
     exit()
 
 
@@ -218,7 +218,6 @@ print("Output summary data updated\n")
 
 ########################################################################
 # Create training and testing data
-#
 ########################################################################
 
 X_train, X_test, y_train, y_test = train_test_split(iris['data'], iris['target'], random_state = 0)
@@ -260,13 +259,13 @@ print("Please input float to test if Machine Learning can predict iris species\n
 userlist = []
 
 # Input data from user
-sepallength = float(input("Enter sepal.length between 4.3 to 7.9: "))
+sepallength = float(input("Enter sepal length between 4.3 to 7.9: "))
 userlist.append(sepallength)
-sepalwidth = float(input("Enter sepal.width between 2.0 to 4.4: "))
+sepalwidth = float(input("Enter sepal width between 2.0 to 4.4: "))
 userlist.append(sepalwidth)
-petallength = float(input("Enter petal.length between 1.0 to 6.9: "))
+petallength = float(input("Enter petal length between 1.0 to 6.9: "))
 userlist.append(petallength)
-petalwidth = float(input("Enter petal.width between 0.1 to 2.5: "))
+petalwidth = float(input("Enter petal width between 0.1 to 2.5: "))
 userlist.append(petalwidth)
 
 X_new = np.array([userlist])
