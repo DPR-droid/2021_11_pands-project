@@ -39,7 +39,7 @@ if (fileexists == False):
     print("https://github.com/DPR-droid/pands-project") 
     exit()
 else:
-    print("The file exists") 
+    print("The iris.data file exists") 
 
 ########################################################################
 ### Read data file and add headers
@@ -74,13 +74,13 @@ f.write("# 25%/50%/75%     Percentiles\n")
 f.write("# max() 	    Maximum Value\n")
 f.write("########################################################################\n")
 f.write(str(dataset.describe()))
-f.write("\n\n\n########################################################################\n")
+f.write("\n\n########################################################################\n")
 f.write("# Output a descriptive analysis of the Iris Setosa\n")
 f.write(str(iris_setosa.describe()))
-f.write("\n\n\n########################################################################\n")
+f.write("\n\n########################################################################\n")
 f.write("# Output a descriptive analysis of the Iris Versicolor\n")
 f.write(str(iris_versicolor.describe()))
-f.write("\n\n\n########################################################################\n")
+f.write("\n\n########################################################################\n")
 f.write("# Output a descriptive analysis of the Iris Virginica\n")
 f.write(str(iris_virginica.describe()))
 f.close()
@@ -88,27 +88,28 @@ f.close()
 print("Output summary to a single text file completed")
 
 ########################################################################
-# exit for test purposes
-########################################################################
-exit()
-########################################################################
 # Histogram of Iris dataset
 # UserWarning: The `size` parameter has been renamed to `height`; 
 # please update your code.
 ########################################################################
 sns.FacetGrid(dataset,hue="species",height=3).map(sns.distplot,"petal.length").add_legend()
+plt.savefig('HistPL.png')
 sns.FacetGrid(dataset,hue="species",height=3).map(sns.distplot,"petal.width").add_legend()
+plt.savefig('HistPW.png')
 sns.FacetGrid(dataset,hue="species",height=3).map(sns.distplot,"sepal.length").add_legend()
+plt.savefig('HistSL.png')
 sns.FacetGrid(dataset,hue="species",height=3).map(sns.distplot,"sepal.width").add_legend()
-# plt.show()
+plt.savefig('HistSW.png')
 
+print("Output of histograms completed")
 
 ########################################################################
 # Create a boxplot
 ########################################################################
 sns.boxplot(x="species",y="petal.length",data=dataset)
-# plt.show()
+plt.savefig('BoxPL.png')
 
+print("Output of boxplot completed")
 
 ########################################################################
 # Create a Pairwise plots/scatterplot matrix
@@ -117,11 +118,15 @@ g = sns.PairGrid(dataset, hue="species")
 g.map_diag(sns.histplot)
 g.map_offdiag(sns.scatterplot)
 g.add_legend()
-# plt.show()
+plt.savefig('Pairwise-Scatterplots.png')
+
+print("Output of Pairwise plots/scatterplot matrix completed")
 
 ########################################################################
 # Create a violin plot
 #
 ########################################################################
 sns.violinplot(x="species",y="petal.length",data=dataset)
-# plt.show()
+plt.savefig('ViolinPL.png')
+
+print("Output of violin plot completed")
