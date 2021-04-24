@@ -3,14 +3,23 @@
 # pands-project
 # analyse.py
 # Author David
+# This script requires the full git repository to be downloaded.
+# https://github.com/DPR-droid/pands-project
 ########################################################################
 
 ########################################################################
-# Program updated 23/04/2021 output plots
+# Program updated 24/04/2021 Finalise program analyse.py
 ########################################################################
 
 ########################################################################
-### imports
+# Supress warning associated with notification of a seaborn deprecated 
+# function
+########################################################################
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+
+########################################################################
+# imports
 ########################################################################
 import pandas as pd
 import os.path
@@ -18,13 +27,15 @@ from os import path
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-#fileexists = False
+
+########################################################################
+### Simple file check if user does not download full git repository
+########################################################################
 fileexists = path.exists("iris.data")
-########################################################################
-### Simple file check
-########################################################################
+
 if (fileexists == False):
-    print("The file does not exist") 
+    print("The file does not exist please download full git repository") 
+    print("https://github.com/DPR-droid/pands-project") 
     exit()
 else:
     print("The file exists") 
@@ -35,95 +46,58 @@ else:
 dataset = pd.read_csv("iris.data",header=None, names=["sepal.length","sepal.width","petal.length","petal.width","species"])
 
 ########################################################################
-### Output data to csv text file for 
+### Output data to csv text file for Project requirements
 ########################################################################
 dataset.to_csv('fisher_iris.csv')
 
-########################################################################
-# output a descriptive analysis of the Dataset and Species
-# count() 	    Number of non-null observations
-# mean() 	    Mean of Values
-# std() 	    Standard Deviation of the Values
-# min() 	    Minimum Value
-# 25%/50%/75%   Percentiles
-# max() 	    Maximum Value
-########################################################################
-
-print(dataset.describe())
-
-# Group by Species
-#gk = dataset.groupby('species')
-
-#print("Setosa")
-# Display the means of the Iris-setosa
-#print(gk.get_group('Iris-setosa'))
-
-#print("versicolor")
-# Display the means of the Iris-versicolor
-# print(gk.get_group('Iris-versicolor').describe())
-
-#print("virginica")
-# Display the means of the Iris-versicolor
-# print(gk.get_group('Iris-virginica').describe())
-
 
 ########################################################################
-# create each species into a dataset
-#
+# Lock dataset for each species
 ########################################################################
-
 iris_setosa=dataset.loc[dataset["species"]=="Iris-setosa"]
 iris_versicolor=dataset.loc[dataset["species"]=="Iris-versicolor"]
 iris_virginica=dataset.loc[dataset["species"]=="Iris-virginica"]
 
 ########################################################################
-# Test group
-#
+# output a descriptive analysis of the Dataset and Species
 ########################################################################
+print(dataset.describe())
+print(iris_setosa.describe())
+print(iris_versicolor.describe())
+print(iris_versicolor.describe())
 
-#print(iris_setosa)
-#print(iris_versicolor)
-#print(iris_virginica)
 
 ########################################################################
-# Try histogram using seaborn module
-#
+# Histogram of Iris dataset
+# UserWarning: The `size` parameter has been renamed to `height`; 
+# please update your code.
 ########################################################################
-
-#sns.FacetGrid(dataset,hue="species",size=3).map(sns.distplot,"petal.length").add_legend()
-#sns.FacetGrid(dataset,hue="species",size=3).map(sns.distplot,"petal.width").add_legend()
-#sns.FacetGrid(dataset,hue="species",size=3).map(sns.distplot,"sepal.length").add_legend()
-#sns.FacetGrid(dataset,hue="species",size=3).map(sns.distplot,"sepal.width").add_legend()
+sns.FacetGrid(dataset,hue="species",height=3).map(sns.distplot,"petal.length").add_legend()
+sns.FacetGrid(dataset,hue="species",height=3).map(sns.distplot,"petal.width").add_legend()
+sns.FacetGrid(dataset,hue="species",height=3).map(sns.distplot,"sepal.length").add_legend()
+sns.FacetGrid(dataset,hue="species",height=3).map(sns.distplot,"sepal.width").add_legend()
 # plt.show()
 
 
 ########################################################################
 # Create a boxplot
-#
 ########################################################################
-
-# sns.boxplot(x="species",y="petal.length",data=dataset)
-# sns.boxplot(x="species",y="sepal.length",data=dataset)
-# sns.boxplot(x="species",y="petal.width",data=dataset)
-# sns.boxplot(x="species",y="sepal.width",data=dataset)
+sns.boxplot(x="species",y="petal.length",data=dataset)
 # plt.show()
 
 
 ########################################################################
 # Create a Pairwise plots/scatterplot matrix
-#
 ########################################################################
-
-# g = sns.PairGrid(dataset, hue="species")
-# g.map_diag(sns.histplot)
-# g.map_offdiag(sns.scatterplot)
-# g.add_legend()
+g = sns.PairGrid(dataset, hue="species")
+g.map_diag(sns.histplot)
+g.map_offdiag(sns.scatterplot)
+g.add_legend()
 # plt.show()
 
 ########################################################################
 # Create a violin plot
 #
 ########################################################################
-
 sns.violinplot(x="species",y="petal.length",data=dataset)
-plt.show()
+# plt.show()
