@@ -91,10 +91,16 @@ This again is another reason why python is suggested as a tool for data analysis
     
     pip install -U scikit-learn
 
+### Supervised machine learning
+The method choosen for Machine Learning is called k-nearest neighbors (KNN) algorithm. A supervised machine learning algorithm (as opposed to an unsupervised machine learning algorithm) is one that relies on labeled input data to learn a function that produces an appropriate output when given new unlabeled data. [9]
 
+The dataset was split into training and test data,  and then create the model and test accuracy of the model with an accuracy of 0.9736842105263158. Then to test the model with dimensions to get output of iris species the following was used as input
 
+    np.array([[6.9, 2.9, 4, 1.5]])
 
-
+Giving the output as 
+    
+    ['versicolor']
 
 
 ## Acknowledgement
@@ -118,6 +124,8 @@ Lecturer Andrew Beatty Programming and Scripting GMIT
 [7] https://en.wikipedia.org/wiki/Violin_plot
 
 [8] https://scikit-learn.org/stable/datasets/toy_dataset.html
+
+[9] https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761
 
 
 ## Tools / Resources used

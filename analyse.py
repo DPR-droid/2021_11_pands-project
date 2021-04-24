@@ -50,7 +50,7 @@ dataset = pd.read_csv("iris.data",header=None, names=["sepal.length","sepal.widt
 ### Output data to csv text file for Project requirements
 ########################################################################
 dataset.to_csv('fisher_iris.csv')
-
+print("Output dataset to csv file completed")
 
 ########################################################################
 # Lock dataset for each species
@@ -85,6 +85,7 @@ f.write("# Output a descriptive analysis of the Iris Virginica\n")
 f.write(str(iris_virginica.describe()))
 f.close()
 
+print("Output summary to a single text file completed")
 
 ########################################################################
 # exit for test purposes
