@@ -50,7 +50,7 @@ dataset = pd.read_csv("iris.data",header=None, names=["sepal.length","sepal.widt
 ### Output data to csv text file for Project requirements
 ########################################################################
 dataset.to_csv('fisher_iris.csv')
-print("Output dataset to csv file completed")
+print("Output dataset to csv file completed\n")
 
 ########################################################################
 # Lock dataset for each species
@@ -63,29 +63,31 @@ iris_virginica=dataset.loc[dataset["species"]=="Iris-virginica"]
 ########################################################################
 # Outputs summary to a single text file for Project requirements
 ########################################################################
-f =  open("OutputSummary.txt", "w")
-f.write("########################################################################\n")
-f.write("# Output a descriptive analysis of the Iris Dataset\n")
-f.write("# count() 	    Number of non-null observations\n")
-f.write("# mean() 	    Mean of Values\n")
-f.write("# std() 	    Standard Deviation of the Values\n")
-f.write("# min() 	    Minimum Value\n")
-f.write("# 25%/50%/75%     Percentiles\n")
-f.write("# max() 	    Maximum Value\n")
-f.write("########################################################################\n")
-f.write(str(dataset.describe()))
-f.write("\n\n########################################################################\n")
-f.write("# Output a descriptive analysis of the Iris Setosa\n")
-f.write(str(iris_setosa.describe()))
-f.write("\n\n########################################################################\n")
-f.write("# Output a descriptive analysis of the Iris Versicolor\n")
-f.write(str(iris_versicolor.describe()))
-f.write("\n\n########################################################################\n")
-f.write("# Output a descriptive analysis of the Iris Virginica\n")
-f.write(str(iris_virginica.describe()))
-f.close()
+with open("OutputSummary.txt",'w') as f:
+    f.write("########################################################################\n")
+    f.write("# Output a descriptive analysis of the Iris Dataset\n")
+    f.write("# count() 	    Number of non-null observations\n")
+    f.write("# mean() 	    Mean of Values\n")
+    f.write("# std() 	    Standard Deviation of the Values\n")
+    f.write("# min() 	    Minimum Value\n")
+    f.write("# 25%/50%/75%      Percentiles\n")
+    f.write("# max() 	    Maximum Value\n")
+    f.write("########################################################################\n")
+    f.write(str(dataset.describe()))
+    f.write("\n\n########################################################################\n")
+    f.write("# Output a descriptive analysis of the Iris Setosa\n")
+    f.write("########################################################################\n")
+    f.write(str(iris_setosa.describe()))
+    f.write("\n\n########################################################################\n")
+    f.write("# Output a descriptive analysis of the Iris Versicolor\n")
+    f.write("########################################################################\n")
+    f.write(str(iris_versicolor.describe()))
+    f.write("\n\n########################################################################\n")
+    f.write("# Output a descriptive analysis of the Iris Virginica\n")
+    f.write("########################################################################\n")
+    f.write(str(iris_virginica.describe()))
 
-print("Output summary data")
+print("Output summary data\n")
 
 ########################################################################
 # Outputs plot to png for Project requirements
@@ -104,7 +106,7 @@ plt.savefig('HistSL.png')
 sns.FacetGrid(dataset,hue="species",height=3).map(sns.distplot,"sepal.width").add_legend()
 plt.savefig('HistSW.png')
 
-print("Output of histograms completed")
+print("Output of histograms completed\n")
 
 ########################################################################
 # Create a boxplot
@@ -114,7 +116,7 @@ sns.boxplot(x="species",y="petal.length",data=dataset)
 plt.xticks(x="species", rotation='vertical')
 plt.savefig('BoxPL.png')
 
-print("Output of boxplot completed")
+print("Output of boxplot completed\n")
 
 ########################################################################
 # Create a violin plot
@@ -122,7 +124,7 @@ print("Output of boxplot completed")
 sns.violinplot(x="species",y="petal.length",data=dataset)
 plt.savefig('ViolinPL.png')
 
-print("Output of violin plot completed")
+print("Output of violin plot completed\n")
 
 ########################################################################
 # Create a Pairwise plots/scatterplot matrix
@@ -133,7 +135,7 @@ g.map_offdiag(sns.scatterplot)
 g.add_legend()
 plt.savefig('Pairwise-Scatterplots.png')
 
-print("Output of Pairwise plots/scatterplot matrix completed")
+print("Output of Pairwise plots/scatterplot matrix completed\n")
 
 
 ########################################################################
@@ -142,7 +144,7 @@ print("Output of Pairwise plots/scatterplot matrix completed")
 ########################################################################
 try:
     import sklearn
-    print("sklearn module detected commencing Machine Learning :D \n")
+    print("sklearn module detected commencing Machine Learning\n")
 except ImportError as e:
     print("Unfortunately you do not have sklearn modules installed\n")
     print("Please install using the following command\n")
@@ -150,3 +152,98 @@ except ImportError as e:
     print("\n")
     exit()
 
+
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+import numpy as np
+
+########################################################################
+### sklearn.datasets load_iris 
+#######################################################################
+iris=load_iris()
+
+
+########################################################################
+### Create the Dataframe in pandas
+### sets the target (isis species to an integer)
+#######################################################################
+data1 = pd.DataFrame(data= np.c_[iris['data'], iris['target']],columns= iris['feature_names'] + ['target'])
+data1['target']=pd.to_numeric(data1['target'],downcast='integer')
+
+########################################################################
+### Update Text file
+#######################################################################
+
+with open("OutputSummary.txt",'r') as f:
+        with open("newfile.txt",'w') as f2: 
+            f2.write("########################################################################\n")
+            f2.write("# Decription of the Fisher Iris Database\n")
+            f2.write("########################################################################\n")
+            f2.write(str(iris['DESCR']))
+            f2.write("\n\n########################################################################\n")
+            f2.write("# Iris Species Type\n")
+            f2.write("########################################################################\n")
+            f2.write(str(iris['target_names']))
+            f2.write("\n\n########################################################################\n")
+            f2.write("# Feature names\n")
+            f2.write("########################################################################\n")
+            f2.write(str(iris['feature_names']))
+            f2.write("\n\n########################################################################\n")
+            f2.write("# Database size\n")
+            f2.write("########################################################################\n")
+            f2.write(str(iris['data'].shape))
+            f2.write("\n\n########################################################################\n")
+            f2.write("# Database summary\n")
+            f2.write("########################################################################\n")
+            f2.write(str(data1))
+            f2.write("\n\n")
+            f2.write(f.read())
+
+########################################################################
+### Read old text, write new file, append old text file, rename file 
+#######################################################################
+os.remove("OutputSummary.txt")
+os.rename("newfile.txt","OutputSummary.txt")
+
+print("Output summary data updated\n")
+
+########################################################################
+# Create training and testing data
+#
+########################################################################
+
+X_train, X_test, y_train, y_test = train_test_split(iris['data'], iris['target'], random_state = 0)
+
+########################################################################
+# output how much is in the training and how much is in the testing data
+#
+########################################################################
+
+print("Output training size\n")
+print(X_train.shape)
+print("Output test size\n")
+print(X_test.shape)
+
+
+########################################################################
+# Create the model and test accuracy of the model
+# 
+########################################################################
+knn = KNeighborsClassifier(n_neighbors = 1)
+knn.fit(X_train, y_train)
+print("Output knn score\n")
+print(knn.score(X_test, y_test))
+print("\n")
+
+
+########################################################################
+# Test the model with dimensions to get output of iris species
+# 6.9, 2.9, 4, 1.5
+########################################################################
+X_new = np.array([[6.9, 2.9, 4, 1.5]])
+
+
+prediction = knn.predict(X_new)
+print("Output species\n")
+print(iris['target_names'][prediction])
