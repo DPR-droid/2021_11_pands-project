@@ -15,6 +15,9 @@
 import pandas as pd
 import os.path
 from os import path
+########################################################################
+# imports for plots
+########################################################################
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -33,11 +36,6 @@ else:
 ### Read data file and add headers
 ########################################################################
 dataset = pd.read_csv("iris.data",header=None, names=["sepal.length","sepal.width","petal.length","petal.width","species"])
-
-########################################################################
-### Output data to csv text file for 
-########################################################################
-dataset.to_csv('fisher_iris.csv')
 
 ########################################################################
 # output a descriptive analysis of the Dataset and Species

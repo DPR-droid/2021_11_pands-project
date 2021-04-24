@@ -3,14 +3,16 @@
 ## Introduction
 The repository is created to show my research of the well-known Fisher’s Iris data set and to write the documentation for my python code to investigate.  The first objective is to create a README file which contains a summary of the dataset and investigation. 
 
-1.	Fisher’s Iris data set background
+1. Fisher’s Iris data set background
+2. Use python to demostrate its functionality
+3. Invesgiate the Iris fisher data base using python with observations
+4. Test machine learning on the data set.
+5. Finalise the python program for project.
 
 ## The Fisher’s Iris data set background
 ### Ronald Fisher
 
-![Ronald Fisher]( https://github.com/DPR-droid/pands-project/blob/main/README%20image%20files/Ronald%20Fisher.JPG)
-
-Sir Ronald Aylmer Fisher, byname R.A. Fisher, (born February 17, 1890, London, England—died July 29, 1962, Adelaide, Australia), British statistician and geneticist who pioneered the application of statistical procedures to the design of scientific experiments. [1]
+![Ronald Fisher]( https://github.com/DPR-droid/pands-project/blob/main/README%20image%20files/Ronald%20Fisher.JPG) Sir Ronald Aylmer Fisher, byname R.A. Fisher, (born February 17, 1890, London, England—died July 29, 1962, Adelaide, Australia), British statistician and geneticist who pioneered the application of statistical procedures to the design of scientific experiments. [1]
 
 ### The data set
 Dr E. Anderson measured the two species Iris setosa and iris versicolor growing in the same colony with the third sample Iris virginica, differs from the two other samples in not being taken from the same natural colony [2]. The dataset fifty samples of each of the three Iris’s, with four measurements dimensions in each of the three different Iris’s
@@ -49,7 +51,7 @@ On Table 11 Iris data set table excerpts by simply using the groupby function it
 
 ![ Why Python 02]( https://github.com/DPR-droid/pands-project/blob/main/README%20image%20files/Why%20Python%2002.PNG)
 
-The file was renamed to whypython.py 
+
 
 ## An overview investigation
 
@@ -83,9 +85,11 @@ Other researchers have shown to use a violin plot this method is test how easily
 
 
 ## Machine Learning
-scikit-learn comes with a few small standard datasets that do not require to download any file from some external website.[8] install module using 
+This again is another reason why python is suggested as a tool for data analysis. While I am only starting on my learning curve with GMIT, I can already see the benefits of using python. The module installed scikit-learn comes with a few small standard datasets that do not require to download any file from some external website.[8] Install the module using
     
     pip install -U scikit-learn
+
+This again is 
 
 
 

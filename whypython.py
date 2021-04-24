@@ -1,7 +1,7 @@
 ########################################################################
 # GMIT project for Programming and Scripting Module
 # pands-project
-# whypython.py
+# The file was renamed to whypython.py 
 # Author David
 ########################################################################
 
