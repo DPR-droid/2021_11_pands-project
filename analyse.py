@@ -247,13 +247,32 @@ with open("OutputSummary.txt",'a') as f:
     f.write("########################################################################\n")
     f.write(str(knn.score(X_test, y_test)))
 
-########################################################################
-# Test the model with dimensions to get output of iris species
-# 6.9, 2.9, 4, 1.5
-########################################################################
-X_new = np.array([[6.9, 2.9, 4, 1.5]])
+print("Output summary data appended with machine learning data\n")
 
+########################################################################
+# Allow user to enter data
+# Measurement of max and min taken from descriptive analysis
+########################################################################
+# X_new = np.array([[6.9, 2.9, 4, 1.5]])
+
+print("Please input float to test if Machine Learning can predict iris species\n")
+
+userlist = []
+
+# Input data from user
+sepallength = float(input("Enter sepal.length between 4.3 to 7.9: "))
+userlist.append(sepallength)
+sepalwidth = float(input("Enter sepal.width between 2.0 to 4.4: "))
+userlist.append(sepalwidth)
+petallength = float(input("Enter petal.length between 1.0 to 6.9: "))
+userlist.append(petallength)
+petalwidth = float(input("Enter petal.width between 0.1 to 2.5: "))
+userlist.append(petalwidth)
+
+X_new = np.array([userlist])
 
 prediction = knn.predict(X_new)
-print("Output species\n")
-print(iris['target_names'][prediction])
+arr = (iris['target_names'][prediction])
+
+for i in arr:
+    print("\nThe machine learning model has predcited the iris species as iris " + i, end = ' ')

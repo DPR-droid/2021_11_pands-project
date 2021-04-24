@@ -171,6 +171,8 @@ https://stackoverflow.com/questions/5914627/prepend-line-to-beginning-of-a-file
 
 https://stackoverflow.com/questions/48230230/typeerror-mismatch-between-array-dtype-object-and-format-specifier-18e/48231106
 
+https://www.askpython.com/python/array/print-an-array-in-python
+
 ### Images
  
 https://en.wikipedia.org/wiki/Ronald_Fisher

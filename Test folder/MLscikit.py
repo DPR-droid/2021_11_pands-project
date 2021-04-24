@@ -14,6 +14,7 @@ from sklearn.neighbors import KNeighborsClassifier
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import sys
 
 ########################################################################
 ### sklearn.datasets load_iris 
@@ -83,11 +84,25 @@ print("*******************************")
 # Test the model with dimensions to get output of iris species
 # 6.9, 2.9, 4, 1.5
 ########################################################################
-X_new = np.array([[6.9, 2.9, 4, 1.5]])
-print(X_new.shape)
+userlist = []
 
-print("*******************************")
+
+# Input data from user
+sepallength = float(input("Enter sepal.length between 4.3 to 7.9: "))
+userlist.append(sepallength)
+sepalwidth = float(input("Enter sepal.width between 2.0 to 4.4: "))
+userlist.append(sepalwidth)
+petallength = float(input("Enter petal.length between 1.0 to 6.9: "))
+userlist.append(petallength)
+petalwidth = float(input("Enter petal.width between 0.1 to 2.5: "))
+userlist.append(petalwidth)
+
+X_new = np.array([userlist])
+
 prediction = knn.predict(X_new)
-print(prediction)
-print("*******************************")
-print(iris['target_names'][prediction])
+arr = (iris['target_names'][prediction])
+
+for i in arr:
+    print("The Machine learning model has predcited the iris species as " + i, end = ' ')
+
+
