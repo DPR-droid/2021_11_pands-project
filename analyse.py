@@ -39,7 +39,7 @@ if (fileexists == False):
     print("https://github.com/DPR-droid/pands-project") 
     exit()
 else:
-    print("The iris.data file exists") 
+    print("The iris.data file exists\n") 
 
 ########################################################################
 ### Read data file and add headers
@@ -175,6 +175,14 @@ data1['target']=pd.to_numeric(data1['target'],downcast='integer')
 ### Update Text file
 #######################################################################
 
+########################################################################
+### To add numpy.array to textfile
+### np.savetxt(f2, speciestype, fmt='%s')
+### np.savetxt(f2, dimensionnames, fmt='%s')
+#######################################################################
+speciestype = iris['target_names']
+dimensionnames = iris['feature_names']
+
 with open("OutputSummary.txt",'r') as f:
         with open("newfile.txt",'w') as f2: 
             f2.write("########################################################################\n")
@@ -184,11 +192,11 @@ with open("OutputSummary.txt",'r') as f:
             f2.write("\n\n########################################################################\n")
             f2.write("# Iris Species Type\n")
             f2.write("########################################################################\n")
-            f2.write(str(iris['target_names']))
+            np.savetxt(f2, speciestype, fmt='%s')
             f2.write("\n\n########################################################################\n")
             f2.write("# Feature names\n")
             f2.write("########################################################################\n")
-            f2.write(str(iris['feature_names']))
+            np.savetxt(f2, dimensionnames, fmt='%s')
             f2.write("\n\n########################################################################\n")
             f2.write("# Database size\n")
             f2.write("########################################################################\n")
@@ -216,26 +224,28 @@ print("Output summary data updated\n")
 X_train, X_test, y_train, y_test = train_test_split(iris['data'], iris['target'], random_state = 0)
 
 ########################################################################
-# output how much is in the training and how much is in the testing data
-#
-########################################################################
-
-print("Output training size\n")
-print(X_train.shape)
-print("Output test size\n")
-print(X_test.shape)
-
-
-########################################################################
 # Create the model and test accuracy of the model
-# 
 ########################################################################
 knn = KNeighborsClassifier(n_neighbors = 1)
 knn.fit(X_train, y_train)
-print("Output knn score\n")
-print(knn.score(X_test, y_test))
-print("\n")
 
+
+########################################################################
+# Outputs summary to a single text file for Project requirements
+########################################################################
+with open("OutputSummary.txt",'a') as f:
+    f.write("\n\n########################################################################\n")
+    f.write("# Output training data size\n")
+    f.write("########################################################################\n")
+    f.write(str(X_train.shape))
+    f.write("\n\n########################################################################\n")
+    f.write("# Output test data size\n")
+    f.write("########################################################################\n")
+    f.write(str(X_test.shape))
+    f.write("\n\n########################################################################\n")
+    f.write("# Output knn score\n")
+    f.write("########################################################################\n")
+    f.write(str(knn.score(X_test, y_test)))
 
 ########################################################################
 # Test the model with dimensions to get output of iris species

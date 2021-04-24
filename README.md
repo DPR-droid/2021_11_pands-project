@@ -165,7 +165,11 @@ https://matplotlib.org/3.1.1/gallery/ticks_and_spines/ticklabels_rotation.html
 
 https://stackoverflow.com/questions/1051254/check-if-python-package-is-installed
 
+https://www.w3schools.com/python/python_file_remove.asp
 
+https://stackoverflow.com/questions/5914627/prepend-line-to-beginning-of-a-file
+
+https://stackoverflow.com/questions/48230230/typeerror-mismatch-between-array-dtype-object-and-format-specifier-18e/48231106
 
 ### Images
  
