@@ -59,6 +59,33 @@ iris_setosa=dataset.loc[dataset["species"]=="Iris-setosa"]
 iris_versicolor=dataset.loc[dataset["species"]=="Iris-versicolor"]
 iris_virginica=dataset.loc[dataset["species"]=="Iris-virginica"]
 
+
+########################################################################
+# Outputs summary to a single text file for Project requirements
+########################################################################
+f =  open("OutputSummary.txt", "w")
+f.write("########################################################################\n")
+f.write("# Output a descriptive analysis of the Iris Dataset\n")
+f.write("# count() 	    Number of non-null observations\n")
+f.write("# mean() 	    Mean of Values\n")
+f.write("# std() 	    Standard Deviation of the Values\n")
+f.write("# min() 	    Minimum Value\n")
+f.write("# 25%/50%/75%     Percentiles\n")
+f.write("# max() 	    Maximum Value\n")
+f.write("########################################################################\n")
+f.write(str(dataset.describe()))
+f.write("\n\n\n########################################################################\n")
+f.write("# Output a descriptive analysis of the Iris Setosa\n")
+f.write(str(iris_setosa.describe()))
+f.write("\n\n\n########################################################################\n")
+f.write("# Output a descriptive analysis of the Iris Versicolor\n")
+f.write(str(iris_versicolor.describe()))
+f.write("\n\n\n########################################################################\n")
+f.write("# Output a descriptive analysis of the Iris Virginica\n")
+f.write(str(iris_virginica.describe()))
+f.close()
+
+
 ########################################################################
 # exit for test purposes
 ########################################################################
