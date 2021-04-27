@@ -68,11 +68,17 @@ A histogram is a plot that lets you discover, and show, the underlying frequency
 #### Observations
 The iris setosa has a noticeable difference from the other species in the petal length and width
 
+![HistPL.png](https://github.com/DPR-droid/pands-project/blob/main/HistPL.png)
+![HistPW.png](https://github.com/DPR-droid/pands-project/blob/main/HistPW.png)
+
+
 ### Boxplot
 The boxplot is a type of chart often used in explanatory data analysis. Box plots visually show the distribution of numerical data and skewness through displaying the data quartiles (or percentiles) and averages.[6]
 
 #### Observations
 The iris setosa again shows a noticeable difference from the other species in the petal length and width. The iris virginica has a couple of outliers on the sepal length and width.
+
+![BoxPL.png](https://github.com/DPR-droid/pands-project/blob/main/BoxPL.png)
 
 ### Pairwise plots/scatterplot matrix
 Scatter plots are used to observe relationships between variables[10]. A four by four matrix with histograms on the diagonal and scatter plots for a combination of each of the variables. 
@@ -80,11 +86,16 @@ Scatter plots are used to observe relationships between variables[10]. A four by
 #### Observations
 The iris setosa again shows a noticeable difference from the other species in the petal length and width. The last two rows of the petal width and length show groupings with only a slight cross over in the iris virginica and Iris virginica.
 
+![Pairwise-Scatterplots.png](https://github.com/DPR-droid/pands-project/blob/main/Pairwise-Scatterplots.png)
+
 ### Violin 
 Other researchers have shown to use a violin plot this method is test how easily it is implemented in python. A violin plot is a method of plotting numeric data. While a box plot only shows summary statistics such as mean/median and interquartile ranges, the violin plot shows the full distribution of the data. [7]
 
 #### Observations
 This seems to be a mix between histograms and boxplots, again repeating the iris setosa the petal length and width distinct difference. The iris virginica has a couple of outliers on the sepal length and width.
+
+![ViolinPL.png](https://github.com/DPR-droid/pands-project/blob/main/ViolinPL.png)
+
 
 
 ## Machine Learning
@@ -122,12 +133,12 @@ The python program completes the following tasks
 14. The predicted iris species is displayed to the user
 15. Program closes.
 
-![MLTesting](https://github.com/DPR-droid/pands-project/blob/main/README%20image%20files/MLTesting.PNG)
+![ProgramOutput.PNG](https://github.com/DPR-droid/pands-project/blob/main/README%20image%20files/ProgramOutput.PNG)
 
 ## Conclusion
-There are many outcomes from this project: 
-1. The analysis of the Fisher Iris dataset would confirm the iris setosa can be distinguished using the petal length and width with minor overlap on the iris virginica and versicolor.
-2. Univariate analysis (histograms, boxplots, scatterplots) when investigating to distinguishes visual patterns within the data
+The outcomes from this project: 
+1. The analysis of the Fisher Iris dataset would confirm the iris setosa can be distinguished using the petal length and width with minor overlap on the iris virginica and versicolor. 
+2. Univariate analysis (histograms, boxplots, scatterplots) visual patterns assist the investigation of the data with distinguishing patterns
 3. The project was a learning exercise to develop my programming skills.
 4. Demonstration of Python as a tool for Data Analysis and Machine Learning. 
 
