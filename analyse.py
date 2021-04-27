@@ -8,7 +8,10 @@
 ########################################################################
 
 ########################################################################
-# Program updated 24/04/2021 Finalise program analyse.py
+# Program updated 27/04/2021 review analyse.py
+# The user of this program should have the all the modules listed 
+# to take full advantage and include the machine learning component
+# pandas, os, matplotlib, seaborn, sklearn, numpy
 ########################################################################
 
 ########################################################################

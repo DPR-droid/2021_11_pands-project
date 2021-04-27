@@ -1,23 +1,24 @@
 # Programming and Scripting project 2021
 
 ## Introduction
-The repository is created to show my research of the well-known Fisher’s Iris data set and to write the documentation for my python code to investigate.  The first objective is to create a README file which contains a summary of the dataset and investigation. 
+The repository is created to show my research of the well-known Fisher’s Iris data set and to write the documentation for my python code to investigate.  The first objective is to create a README file that contains a summary of the dataset and investigation. 
 
 1. Fisher’s Iris data set background
 2. Use python to demonstrate its functionality
-3. Investigate the Iris fisher data base using python with observations
+3. Investigate the Iris fisher database using python with observations
 4. Test machine learning on the data set.
-5. Finalise the python program for project.
+5. Finalise the python program for the project.
+6. Conclusion
 
 ## The Fisher’s Iris data set background
 ### Ronald Fisher
 
 ![Ronald Fisher]( https://github.com/DPR-droid/pands-project/blob/main/README%20image%20files/Ronald%20Fisher.JPG) 
 
-Sir Ronald Aylmer Fisher, byname R.A. Fisher, (born February 17, 1890, London, England—died July 29, 1962, Adelaide, Australia), British statistician and geneticist who pioneered the application of statistical procedures to the design of scientific experiments. [1]
+Sir Ronald Aylmer Fisher, by name R.A. Fisher, (born February 17, 1890, London, England—died July 29, 1962, Adelaide, Australia), British statistician and geneticist who pioneered the application of statistical procedures to the design of scientific experiments. [1]
 
 ### The data set
-Dr E. Anderson measured the two species Iris setosa and iris versicolor growing in the same colony with the third sample Iris virginica, differs from the two other samples in not being taken from the same natural colony [2]. The dataset fifty samples of each of the three Iris’s, with four measurements dimensions in each of the three different Iris’s
+Dr E. Anderson measured the two species Iris setosa and iris versicolor growing in the same colony with the third sample Iris virginica, which differs from the two other samples in not being taken from the same natural colony [2]. The dataset fifty samples of each of the three Iris’s, with four measurements dimensions in each of the three different Iris’s
 1.	Sepal Length
 2.	Sepal width
 3.	Petal Length
@@ -35,7 +36,7 @@ The dataset was first used by Ronald Fisher in 1936 in his paper “The use of m
 ![ The observed means and their differences are shown in Table 11. The sums of squares and products of deviations  from the specific means are shown in Table 111.]( https://github.com/DPR-droid/pands-project/blob/main/README%20image%20files/Table%202.PNG)
 
 ## Why Python for this project
-Python is a 4th generation languages, also known as very high level languages.  Python's large standard library, commonly cited as one of its greatest strengths, provides tools suited to many tasks.
+Python is a 4th generation language, also known as a very high-level languages.  Python's large standard library commonly cited as one of its greatest strengths provides tools suited to many tasks.
 
 After downloading the iris data set and using just one module and two lines of code the data can be imported, read, and produce a summary of the data. 
 
@@ -45,7 +46,7 @@ After downloading the iris data set and using just one module and two lines of c
 
 ![Why Python 01]( https://github.com/DPR-droid/pands-project/blob/main/README%20image%20files/Why%20Python%2001.PNG)
 
-On Table 11 Iris data set table excerpts by simply using the groupby function it can be replicated the means of the setosa and versicolor irises
+In Table II Iris data set table excerpts by simply using the groupby function, it can be replicated the means of the setosa and versicolor irises
 
     gk = dataset.groupby('species')
     print(gk.get_group('Iris-setosa').mean())
@@ -59,72 +60,76 @@ On Table 11 Iris data set table excerpts by simply using the groupby function it
 
 I wanted to do a descriptive analysis of the entire dataset and by species. The output would provide detail of the count (number of observations), mean, standard deviation of the values, minimum, 25%/50%/75% Percentiles and maximum values. This is also a simple check to verify the dataset I was working with had 150 observation with 50 observations per species.
 
-Definition of taxonomy is the scientific study of naming, defining (circumscribing) and classifying groups of biological organisms based on shared characteristics. In Python, we are going on a journey by analysing the dataset, if we can classify the groups of irises shared characteristics (sepal and petal, lengths and width) in the three different species. This project will first start using histograms, scatterplots, boxplots (and other methods if discovered during further research) to help identify these differences. This method is called Univariate analysis is the simplest form of analysing data. “Uni” means “one”, so in other words your data has only one variable. It doesn't deal with causes or relationships (unlike regression) and its major purpose is to describe; It takes data, summarizes that data and finds patterns in the data [4]. If times allow and we will see if we can use predictive analysis to identify the species of Iris
+Definition of taxonomy is the scientific study of naming, defining (circumscribing) and classifying groups of biological organisms based on shared characteristics. [3] In Python, we are going on a journey by analysing the dataset, if we can classify the groups of irises shared characteristics (sepal and petal, lengths and width) in the three different species. This project will first start using histograms, scatterplots, boxplots (and other methods if discovered during further research) to help identify these differences. This method is called Univariate analysis is the simplest form of analysing data. “Uni” means “one”, so in other words, your data has only one variable. It doesn't deal with causes or relationships (unlike regression) and its major purpose is to describe; It takes data, summarizes that data and finds patterns in the data [4]. 
 
 ### Histograms
-Histogram is a plot that lets you discover, and show, the underlying frequency distribution (shape) of a set of continuous data [5]
+A histogram is a plot that lets you discover, and show, the underlying frequency distribution (shape) of a set of continuous data [5]
 
 #### Observations
-    The iris setosa has a noticeable difference from the other species in the petal length and width
+The iris setosa has a noticeable difference from the other species in the petal length and width
 
 ### Boxplot
 The boxplot is a type of chart often used in explanatory data analysis. Box plots visually show the distribution of numerical data and skewness through displaying the data quartiles (or percentiles) and averages.[6]
 
 #### Observations
-    The iris setosa again shows a noticeable difference from the other species in the petal length and width. The iris virginica has a couple of outliers on the sepal lenght and width.
+The iris setosa again shows a noticeable difference from the other species in the petal length and width. The iris virginica has a couple of outliers on the sepal length and width.
 
 ### Pairwise plots/scatterplot matrix
-With four lines of code in python gives a four by four matrix with histograms on the diagonal and scatter plots for a combination of each of the variables. 
+Scatter plots are used to observe relationships between variables[10]. A four by four matrix with histograms on the diagonal and scatter plots for a combination of each of the variables. 
 
 #### Observations
-    The iris setosa again shows a noticeable difference from the other species in the petal length and width. The last two rows of the petal width and lenght show groupings with only slight cross over in the iris virginica and iris virginica .
+The iris setosa again shows a noticeable difference from the other species in the petal length and width. The last two rows of the petal width and length show groupings with only a slight cross over in the iris virginica and Iris virginica.
 
 ### Violin 
-Other researchers have shown to use a violin plot this method is test how easily it is implemented in python. A violin plot is a method of plotting numeric data. It is like a box plot, with the addition of a rotated kernel density plot on each side. ... While a box plot only shows summary statistics such as mean/median and interquartile ranges, the violin plot shows the full distribution of the data.
+Other researchers have shown to use a violin plot this method is test how easily it is implemented in python. A violin plot is a method of plotting numeric data. While a box plot only shows summary statistics such as mean/median and interquartile ranges, the violin plot shows the full distribution of the data. [7]
 
 #### Observations
-    This seems to be a mix between histograms and boxplots, further research is required to understand the output.
+This seems to be a mix between histograms and boxplots, again repeating the iris setosa the petal length and width distinct difference. The iris virginica has a couple of outliers on the sepal length and width.
 
 
 ## Machine Learning
-This again is another reason why python is suggested as a tool for data analysis. While I am only starting on my learning curve with GMIT, I can already see the benefits of using python. The module installed scikit-learn comes with a few small standard datasets that do not require to download any file from some external website [8] and includes the Fisher iris database . Install the module using
+This again is another reason why python is suggested as a tool for data analysis. While I am only starting on my learning curve with GMIT, I can already see the benefits of using python. The module installed scikit-learn comes with a few small standard datasets that do not require downloading any file from some external website [8] and includes the Fisher iris database. Install the module using
     
     pip install -U scikit-learn
 
 ### Supervised machine learning
-The method chosen for Machine Learning is called k-nearest neighbours (KNN) algorithm. A supervised machine learning algorithm (as opposed to an unsupervised machine learning algorithm) is one that relies on labelled input data to learn a function that produces an appropriate output when given new unlabelled data. [9]
+The method chosen for Machine Learning is called the k-nearest neighbours (KNN) algorithm. A supervised machine learning algorithm (as opposed to an unsupervised machine learning algorithm) relies on labelled input data to learn a function that produces an appropriate output when given new unlabelled data. [9]
 
-The dataset was split into training and test data, and then create the model and test accuracy of the model with an accuracy of 0.9736842105263158. Then to test the model with dimensions to get output of iris species the following was used as input
+The dataset was split into training and test data, the model was created and gave a test accuracy of 0.9736842105263158. Adding random dimensions into a NumPy array with values between the min and max of petal/sepal length and width 
 
     np.array([[6.9, 2.9, 4, 1.5]])
 
-Giving the output as 
+The model predicted the species of iris as: 
     
     ['versicolor']
 
 ## Python Program
 The python program completes the following tasks
 
-1. Imports modules
+1. Imports modules (pandas, os, matplotlib, seaborn, sklearn, NumPy)
 2. Checks if the user has the iris.data file. Informs user if present or not
 3. Reads the data file and adds headers
-4. Outputs data to csv file and informs the user when completed
+4. Outputs data to CSV file and informs the user when completed
 5. Sets the dataset for each species of iris
 6. Outputs data to a single text file and informs the user when completed
 7. Saves histograms, boxplot, violin and Pairwise plots/scatterplot matrix as pngs and informs the user when completed
-8. Test if user has sklearn module installed and ends program if not
-9. Creates the dataframe
-10. Original text is re-written with output from sklearn module
+8. Test if the user has the sklearn module installed and ends the program if not
+9. Creates the data frame
+10. Original text is re-written with output from the sklearn module
 11. Creates the training data and tests the accuracy of the model
 12. Appends summary text file and informs the user when completed
-13. Allows user to input data and test the model
-14. The predicted iris species is displayed to user
+13. Allows the user to input data and test the model
+14. The predicted iris species is displayed to the user
 15. Program closes.
-
-## Conclusion
 
 ![MLTesting](https://github.com/DPR-droid/pands-project/blob/main/README%20image%20files/MLTesting.PNG)
 
+## Conclusion
+There are many outcomes from this project: 
+1. The analysis of the Fisher Iris dataset would confirm the iris setosa can be distinguished using the petal length and width with minor overlap on the iris virginica and versicolor.
+2. Univariate analysis (histograms, boxplots, scatterplots) when investigating to distinguishes visual patterns within the data
+3. The project was a learning exercise to develop my programming skills.
+4. Demonstration of Python as a tool for Data Analysis and Machine Learning. 
 
 ## Acknowledgement
 Lecturer Andrew Beatty Programming and Scripting GMIT
@@ -150,6 +155,8 @@ Family and friends for their support
 [8] https://scikit-learn.org/stable/datasets/toy_dataset.html
 
 [9] https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761
+
+[10] https://chartio.com/learn/charts/what-is-a-scatter-plot/
 
 
 ## Tools / Resources used
