@@ -223,5 +223,5 @@ https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1469-1809.1936.tb02137.x
 https://www.kaggle.com/vinayshaw/iris-species-100-accuracy-using-naive-bayes
 
 
-
+Finished
 
